@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE } from "../../consts";
+import Navigation from "@/components/organisms/navigation";
+import { AppProvider } from "@/lib/provider/app-context-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,9 +35,8 @@ export const metadata: Metadata = {
         alt: "Ratchaya's Portfolio Showcase",
       },
     ],
-  }
+  },
 };
-
 
 export default function RootLayout({
   children,
@@ -47,7 +48,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <AppProvider>
+          <Navigation />
+          {children}
+        </AppProvider>
       </body>
     </html>
   );
