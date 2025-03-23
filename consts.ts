@@ -1,0 +1,3 @@
+export const SITE_TITLE = "Ratchaya Suradecharitthikul | Full-Stack Developer";
+export const SITE_DESCRIPTION = "Explore the portfolio of Ratchaya Suradecharitthikul, a Full-Stack Developer specializing in React Native, Flutter, Next.js, Laravel, and WordPress. Experienced in building scalable web and mobile applications with a strong focus on UX and performance.";
+export const SITE_NAME = "Ratchaya Suradecharitthikul";
